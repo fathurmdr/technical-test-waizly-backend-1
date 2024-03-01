@@ -1,0 +1,53 @@
+### Register User
+POST http://localhost:3000/api/register
+Content-Type: application/json
+
+{
+  "username": "budi",
+  "password": "12345678"
+}
+
+### Login User
+POST http://localhost:3000/api/login
+Content-Type: application/json
+
+{
+  "username": "budi",
+  "password": "12345678"
+}
+
+### Create Task 
+POST http://localhost:3000/api/task
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYnVkaSIsImlhdCI6MTcwOTMxMDYyMSwiZXhwIjoxNzA5Mzk3MDIxfQ.mYHrMTIGfJswF7Q8vAueyevtFO4YgAkERyUozmfBaBo
+Content-Type: application/json
+
+{
+  "title": "task 4",
+  "description": "this is task 4",
+  "deadline": "2024-03-04",
+  "completed": false
+}
+
+### Get All Tasks
+GET http://localhost:3000/api/task
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYnVkaSIsImlhdCI6MTcwOTMxMDYyMSwiZXhwIjoxNzA5Mzk3MDIxfQ.mYHrMTIGfJswF7Q8vAueyevtFO4YgAkERyUozmfBaBo
+
+### Get Task by Id
+GET http://localhost:3000/api/task/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYnVkaSIsImlhdCI6MTcwOTMxMDYyMSwiZXhwIjoxNzA5Mzk3MDIxfQ.mYHrMTIGfJswF7Q8vAueyevtFO4YgAkERyUozmfBaBo
+
+### Update Task by Id
+PATCH http://localhost:3000/api/task/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYnVkaSIsImlhdCI6MTcwOTMxMDYyMSwiZXhwIjoxNzA5Mzk3MDIxfQ.mYHrMTIGfJswF7Q8vAueyevtFO4YgAkERyUozmfBaBo
+Content-Type: application/json
+
+{
+  "title": "first task",
+  "description": "this is first task",
+  "deadline": "2024-03-04",
+  "completed": false
+}
+
+### Delete Task by Id
+DELETE http://localhost:3000/api/task/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYnVkaSIsImlhdCI6MTcwOTMxMDYyMSwiZXhwIjoxNzA5Mzk3MDIxfQ.mYHrMTIGfJswF7Q8vAueyevtFO4YgAkERyUozmfBaBo
